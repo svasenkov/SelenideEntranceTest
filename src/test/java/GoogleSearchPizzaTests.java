@@ -12,10 +12,10 @@ public class GoogleSearchPizzaTests {
         // Открыть google
         open("https://google.com");
 
-        // Ввести yandex в поиск
+        // Ввести  в поиск вкусная пицца
         $(byName("q")).setValue("вкусная пицца").pressEnter();
 
-        // Проверить, что yandex.ru появился в результатах поиска
+        // Проверить, что есть сайт рекомендующий пиццу dominos появился в результатах поиска
         $(byId("rcnt")).shouldHave(text("dominos"));
     }
 }
