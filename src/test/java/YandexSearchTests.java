@@ -8,12 +8,13 @@ import static com.codeborne.selenide.Selenide.open;
 public class YandexSearchTests {
 
     @Test
-    void searchTextTests() {
-        //Открыть страницу yandex.ru
+    void searchTextTest() {
         open("https://yandex.ru");
+        
         //Найти sportbox.ru
-        $(byId("text")).setValue("sportbox.ru").pressEnter();
+        $("#text").setValue("sportbox.ru").pressEnter();
+        
         // Проверить, что sportbox.ru появился в результатах поиска
-        $(byId("search-result")).shouldHave(text("sportbox.ru"));
+        $("#search-result").shouldHave(text("sportbox.ru"));
     }
 }
